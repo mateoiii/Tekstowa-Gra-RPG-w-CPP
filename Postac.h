@@ -13,7 +13,6 @@ protected:                                                          // protected
 public:
     Postac(std::string imie);                                       // tu jest konstruktor 
                                                                     
-
     virtual ~Postac();                                              // to jest destruktor, dodajemy virtual (bo moża będzie ją potem zastąpić) bo przy dziedziczeniu mógłby wystąpić problem z usuwaniem, a tak najpierw sprawdzi destruktor klasy pochodnej potem bazowej i wszytsko bęzie usunięte
 
     virtual void atakuj() = 0;                                      // to jest metoda wirtualna, czyli musi być zaimplementowana w klasie dziedziczącej, a = 0 oznacza że nie ma implementacji w tej klasie
