@@ -13,5 +13,16 @@ int main() {
     oryginalnyMag.podniesPrzedmiot("Mikstura Many");
     oryginalnyMag.pokazPlecak();
 
+    std::cout << "\n-----KLONOWANIE (Test Głębokiej Kopii)-----" << std::endl;
+    Mag klonMaga = oryginalnyMag; 
+    
+    klonMaga.podniesPrzedmiot("Zatruty Sztylet"); 
+    
+    std::cout << "Oryginal:" << std::endl;
+    oryginalnyMag.pokazPlecak(); 
+    std::cout << "Klon:" << std::endl;
+    klonMaga.pokazPlecak();      
+
+
     return 0;
 }
