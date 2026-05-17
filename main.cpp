@@ -23,6 +23,15 @@ int main() {
     std::cout << "Klon:" << std::endl;
     klonMaga.pokazPlecak();      
 
+    std::cout << "\n--- TEST PRZYPISANIA ---" << std::endl;
+    Mag innyMag("Zly Mag");
+    innyMag.podniesPrzedmiot("Mroczny Krysztal");
+    
+    innyMag = klonMaga; 
+    
+    std::cout << "Zly Mag po nadpisaniu go klonem:" << std::endl;
+    innyMag.pokazPlecak(); 
+
 
     return 0;
 }
