@@ -13,7 +13,4 @@ public:
 
     void atakuj() override;        // override oznacza, że nadpisujemy metodę wirtualną z klasy bazowej
 
-    
-
-    
 };

@@ -9,6 +9,5 @@ Mag::~Mag(){
 }
 
 void Mag::atakuj(){
-
-
+    std::cout << m_imie << " rzuca Fire Ball." << std::endl;
 }
