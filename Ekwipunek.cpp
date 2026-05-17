@@ -1,0 +1,23 @@
+//Ekwipunek.cpp
+
+#include "Ekwipunek.h"
+
+Ekwipunek::Ekwipunek(){
+}
+
+void Ekwipunek::pokazZawartosc() const{
+    if (m_przedmioty.empty()) {
+        std::cout << "Plecak jest pusty." << std::endl;
+        return; // przerywamy funkcję jeśli nic nie ma
+    }
+    
+    std::cout << "W plecaku: ";
+    for (std::string p : m_przedmioty) {
+        std::cout << p << ", ";
+    }
+    std::cout << std::endl;
+}
+
+void Ekwipunek::dodajPrzedmiot(std::string przedmiot){
+    m_przedmioty.push_back(przedmiot);
+}

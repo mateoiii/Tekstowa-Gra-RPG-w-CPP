@@ -9,6 +9,5 @@ Wojownik::~Wojownik(){
 }
 
 void Wojownik::atakuj(){
-
-
+        std::cout << m_imie << " uderz mieczem." << std::endl;
 }

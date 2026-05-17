@@ -3,6 +3,7 @@
 #pragma once                                                        //zapobiego dołaczaniu tego samego pliku nagłówkowego wielokrotnie
 #include <iostream>
 #include <string>
+#include <Ekwipunek.h>
 
 class Postac{ 
 protected:                                                          // protected bo dostępne dla klas dziedziczących
@@ -10,6 +11,8 @@ protected:                                                          // protected
     int m_poziom;
     int m_exp;
     int m_hp;
+    Ekwipunek* m_ekwipunek;
+
 public:
     Postac(std::string imie);                                       // tu jest konstruktor 
                                                                     
