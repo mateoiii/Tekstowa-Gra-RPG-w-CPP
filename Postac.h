@@ -3,6 +3,7 @@
 #pragma once                                                        //zapobiego dołaczaniu tego samego pliku nagłówkowego wielokrotnie
 #include <iostream>
 #include <string>
+#include <random>
 #include "Ekwipunek.h"
 
 class Postac{ 
@@ -13,12 +14,16 @@ protected:                                                          // protected
     int m_hp;
     Ekwipunek* m_ekwipunek;
 
+    int losoweObrazenia(int min, int max);
+
 public:
     Postac(std::string imie);                                       // tu jest konstruktor 
                                                                     
     virtual ~Postac();                                              // to jest destruktor, dodajemy virtual (bo moża będzie ją potem zastąpić) bo przy dziedziczeniu mógłby wystąpić problem z usuwaniem, a tak najpierw sprawdzi destruktor klasy pochodnej potem bazowej i wszytsko bęzie usunięte
 
-    virtual void atakuj() = 0;                                      // to jest metoda wirtualna, czyli musi być zaimplementowana w klasie dziedziczącej, a = 0 oznacza że nie ma implementacji w tej klasie
+    virtual void atakuj(Postac* cel) = 0;                                      // to jest metoda wirtualna, czyli musi być zaimplementowana w klasie dziedziczącej, a = 0 oznacza że nie ma implementacji w tej klasie
+
+    void otrzymajObrazenia(int otrzymaneObrazenia);
 
     void przedstawSie() const;                                      // const bo nie zmieniamy żadnych danych         
 
@@ -29,5 +34,6 @@ public:
     
 
     void podniesPrzedmiot(std::string przedmiot);                   // metoda do podnoszenia przedmiotów, będzie po prostu przekazywać przedmiot do ekwipunku musi tu być bo z poziomu main nie mamy dotsępu do funckji ekwipunku, a z poziomu postaci już tak.
+    
     void pokazPlecak() const;
 };// po destruktorze konstruktorze i metodach musi być średnik bo to są zapowiedzi tych rzsczy które trzeba będzie zaimplementować w pliku .cpp

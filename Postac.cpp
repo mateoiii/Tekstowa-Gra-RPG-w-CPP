@@ -2,11 +2,25 @@
 
 #include "Postac.h"
 
+
+
+int Postac::losoweObrazenia(int min, int max){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> rozklad(min, max);
+    return rozklad(gen);
+
+}
+
 Postac::Postac(std::string imie): m_imie(imie), m_poziom(1), m_exp(0), m_hp(100), m_ekwipunek(new Ekwipunek()){  // definicja konstruktora, : znaczy lista inicjalizacyjna "zanim", new to po prostu narzędzie do tworzenia rzeczy na stałe w pamięci i zwracania adresu, tworzymy pusty ekwipunek
 }
 
 Postac::~Postac(){                                                                                               // definicja destruktora, nie ma virtual bo on nie mówi jaka jest funckja tylko jak sie ma zachować w stosunku do innych klas
     delete m_ekwipunek;                                                                                          // zanim usunie się bohater to usuwamy ekwipunek żeby nie było wycieków pamięci
+}
+
+void Postac::otrzymajObrazenia(int otrzymaneObrazenia){
+    m_hp =- otrzymaneObrazenia;
 }
 
 void Postac::przedstawSie() const{                                                                               // definicja metody przedstawSie, const zostawiamy

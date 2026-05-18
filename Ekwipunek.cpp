@@ -12,7 +12,7 @@ void Ekwipunek::pokazZawartosc() const{
     }
     
     std::cout << "W plecaku: ";
-    for (std::string p : m_przedmioty) {
+    for(std::string p : m_przedmioty){
         std::cout << p << ", ";
     }
     std::cout << std::endl;
