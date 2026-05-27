@@ -9,6 +9,6 @@ Mag::~Mag(){
 }
 
 void Mag::atakuj(Postac* cel){
-    std::cout << m_imie << " rzuca Fire Ball na "<< cel << std::endl;
+    std::cout << m_imie << " rzuca Fire Ball na " << cel << std::endl;
     cel->otrzymajObrazenia(losoweObrazenia(10,20));
 }

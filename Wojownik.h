@@ -5,12 +5,12 @@
 
 class Wojownik:public Postac{
 private:
-    int m_sila;                     // dodatkowy atrybut dla Wojownika
+    int m_sila;                                 // dodatkowy atrybut dla Wojownika
 public:
-    Wojownik(std::string imie);     // konstruktor
+    Wojownik(std::string imie);                 // konstruktor
 
-    ~Wojownik();                    // destruktor
+    ~Wojownik();                                // destruktor
 
-    void atakuj(Postac* cel) override;         // override oznacza, że nadpisujemy metodę wirtualną z klasy bazowej
+    void atakuj(Postac* cel) override;          // override oznacza, że nadpisujemy metodę wirtualną z klasy bazowej
     
 };

@@ -1,18 +1,20 @@
-//Potwor.h
+//Przeciwnik.h
 
 #pragma once
 #include "Postac.h"
 
-class Potwor:public Postac{
+class Przeciwnik:public Postac{
 
 protected:
 
+    static std::string wylosujImie();
+
 public:
 
-    Potwor();
+    Przeciwnik();
 
-    ~Potwor();
+    ~Przeciwnik();
 
-    void atakuj() 
+    void atakuj(Postac* cel) override;
 
 };

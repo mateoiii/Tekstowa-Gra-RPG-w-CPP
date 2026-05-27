@@ -3,7 +3,6 @@
 #include "Postac.h"
 
 
-
 int Postac::losoweObrazenia(int min, int max){
     std::random_device rd;
     std::mt19937 gen(rd());
