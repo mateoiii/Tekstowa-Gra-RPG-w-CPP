@@ -16,6 +16,8 @@ protected:                                                          // protected
 
     int losoweObrazenia(int min, int max);
 
+    bool czyCiosKrytyczny(int szansaWProcentach);
+
 public:
     Postac(std::string imie);                                       // tu jest konstruktor 
                                                                     

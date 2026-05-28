@@ -20,5 +20,13 @@ Przeciwnik::~Przeciwnik(){
 }
 
 void Przeciwnik::atakuj(Postac* cel){
+    int obrazenia = losoweObrazenia(5, 15); 
     
+    if(czyCiosKrytyczny(20)){
+        obrazenia *= 2;
+        std::cout << m_imie << " zadaje KRYTYCZNY CIOS!" << std::endl;
+    } 
+    else std::cout << m_imie << " atakuje!" << std::endl;
+
+    cel->otrzymajObrazenia(obrazenia); 
 }

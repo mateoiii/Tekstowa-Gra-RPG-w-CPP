@@ -10,6 +10,10 @@ int Postac::losoweObrazenia(int min, int max){
     return rozklad(gen);
 
 }
+bool Postac::czyCiosKrytyczny(int szansaWProcentach){
+    if (losoweObrazenia(1,100) <= szansaWProcentach) return 1;
+    else return 0;
+}
 
 Postac::Postac(std::string imie): m_imie(imie), m_poziom(1), m_exp(0), m_hp(100), m_ekwipunek(new Ekwipunek()){  // definicja konstruktora, : znaczy lista inicjalizacyjna "zanim", new to po prostu narzędzie do tworzenia rzeczy na stałe w pamięci i zwracania adresu, tworzymy pusty ekwipunek
 }
