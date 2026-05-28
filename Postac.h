@@ -18,6 +18,8 @@ protected:                                                          // protected
 
     bool czyCiosKrytyczny(int szansaWProcentach);
 
+    
+
 public:
     Postac(std::string imie);                                       // tu jest konstruktor 
                                                                     
@@ -38,4 +40,8 @@ public:
     void podniesPrzedmiot(std::string przedmiot);                   // metoda do podnoszenia przedmiotów, będzie po prostu przekazywać przedmiot do ekwipunku musi tu być bo z poziomu main nie mamy dotsępu do funckji ekwipunku, a z poziomu postaci już tak.
     
     void pokazPlecak() const;
+    
+    bool czyZyje() const {
+    return m_hp > 0;
+    }
 };// po destruktorze konstruktorze i metodach musi być średnik bo to są zapowiedzi tych rzsczy które trzeba będzie zaimplementować w pliku .cpp
